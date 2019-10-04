@@ -6,6 +6,7 @@
 package ui;
 
 import dto.Charac;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -30,6 +31,14 @@ public class CreateCharacter1 extends javax.swing.JDialog {
                 txtAddDemeanor.getItemAt(txtAddDemeanor.getSelectedIndex()), txtAddConcept.getItemAt(txtAddConcept.getSelectedIndex()),
                 txtAddClan.getItemAt(txtAddClan.getSelectedIndex()), txtAddGeneration.getText().toString(),
                 txtAddSire.getText().toString());
+    }
+    
+    private boolean areFieldsRight(){
+        if(txtAddCharacterName.getText().isEmpty() || txtAddPlayerName.getText().isEmpty() || txtAddChronicle.getText().isEmpty()
+                || txtAddGeneration.getText().isEmpty() || txtAddSire.getText().isEmpty()){
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -119,7 +128,7 @@ public class CreateCharacter1 extends javax.swing.JDialog {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAddChronicle)
                     .addComponent(txtAddChronicle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel3);
@@ -213,7 +222,7 @@ public class CreateCharacter1 extends javax.swing.JDialog {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAddSire)
                     .addComponent(txtAddSire, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel5);
@@ -240,9 +249,9 @@ public class CreateCharacter1 extends javax.swing.JDialog {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(lblTitleAddCharacter1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addGap(43, 43, 43)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnNext)
                 .addGap(23, 23, 23))
         );
@@ -255,7 +264,9 @@ public class CreateCharacter1 extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
@@ -267,9 +278,17 @@ public class CreateCharacter1 extends javax.swing.JDialog {
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         CreateCharacter2 createCharacter2 = new CreateCharacter2(mainScreen, true);
-        createCharacter2.getData1(getDataPart1());
-        createCharacter2.setVisible(true);       
-        dispose();
+        
+        if(areFieldsRight()){
+            createCharacter2.getData1(getDataPart1());
+            createCharacter2.setVisible(true);       
+            dispose();
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Can not be empty fields.", 
+                    "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+
     }//GEN-LAST:event_btnNextActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

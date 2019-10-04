@@ -119,4 +119,13 @@ public class Logic {
         }
         return file;
     }
+    
+    public static void removeCharacFile(String filename){
+        File file = new File("./save/" + filename + ".lola");
+        
+        if(!file.exists()){
+            return;
+        }
+        file.delete();
+    }
 }

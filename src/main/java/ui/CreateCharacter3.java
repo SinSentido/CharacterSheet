@@ -5,6 +5,7 @@
  */
 package ui;
 import dto.Charac;
+import javax.swing.JOptionPane;
 import logic.Logic;
 
 /**
@@ -34,6 +35,13 @@ public class CreateCharacter3 extends javax.swing.JDialog {
         return charac3;
     }
     
+    private boolean isHistoryWell(){
+        if(txtCharacterHistory.getText().isEmpty()){
+            return false;
+        }
+        return true;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,13 +52,20 @@ public class CreateCharacter3 extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        btnFinish = new javax.swing.JButton();
         lblTitleAddCharacter3 = new javax.swing.JLabel();
         lblSubtitleCreateCharacter3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtCharacterHistory = new javax.swing.JTextArea();
-        btnFinish = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        btnFinish.setText("Finish");
+        btnFinish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinishActionPerformed(evt);
+            }
+        });
 
         lblTitleAddCharacter3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         lblTitleAddCharacter3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -65,13 +80,6 @@ public class CreateCharacter3 extends javax.swing.JDialog {
         txtCharacterHistory.setRows(5);
         jScrollPane1.setViewportView(txtCharacterHistory);
 
-        btnFinish.setText("Finish");
-        btnFinish.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFinishActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -79,15 +87,13 @@ public class CreateCharacter3 extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(lblTitleAddCharacter3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(lblSubtitleCreateCharacter3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblSubtitleCreateCharacter3, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnFinish)
-                .addGap(59, 59, 59))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(254, 254, 254)
+                .addGap(249, 249, 249)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 689, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(257, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnFinish)
+                .addGap(90, 90, 90))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,11 +101,15 @@ public class CreateCharacter3 extends javax.swing.JDialog {
                 .addComponent(lblTitleAddCharacter3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblSubtitleCreateCharacter3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnFinish)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnFinish)
+                        .addGap(24, 24, 24))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(48, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -117,9 +127,17 @@ public class CreateCharacter3 extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinishActionPerformed
-        mainScreen.setVisible(true);
-        Logic.saveNewCharac(getDataPart3());
-        dispose();
+
+        
+        if(!isHistoryWell()){
+            JOptionPane.showMessageDialog(this, "Write something in history, you lazy dog!!", 
+                    "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            mainScreen.setVisible(true);
+            Logic.saveNewCharac(getDataPart3());
+            dispose();
+        }        
     }//GEN-LAST:event_btnFinishActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

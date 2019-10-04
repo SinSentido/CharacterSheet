@@ -6,6 +6,7 @@
 package ui;
 
 import dto.Charac;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -41,7 +42,53 @@ public class CreateCharacter2 extends javax.swing.JDialog {
     public void getData1(Charac charac1){
         charac2 = charac1;
     }
-
+    
+    private boolean arePointsWellAsigned(){
+        
+        if(physicalPoints.getItemAt(physicalPoints.getSelectedIndex()).equals(socialPoints.getItemAt(socialPoints.getSelectedIndex()))
+                ||physicalPoints.getItemAt(physicalPoints.getSelectedIndex()).equals(mentalPoints.getItemAt(mentalPoints.getSelectedIndex()))
+                ||socialPoints.getItemAt(socialPoints.getSelectedIndex()).equals(mentalPoints.getItemAt(mentalPoints.getSelectedIndex()))){
+        return false;
+        }
+        return true;
+    }
+    
+    private boolean arePhysicalPointsWell(){
+        byte totalPoints = Byte.parseByte(physicalPoints.getItemAt(physicalPoints.getSelectedIndex()));
+        byte strength = (Byte)strengthPoints.getValue();
+        byte dexterity = (Byte)dexterityPoints.getValue();
+        byte stamina = (Byte)staminaPoints.getValue();
+        
+        if(strength + dexterity + stamina != totalPoints){
+            return false;
+        }        
+        return true;
+    }
+    
+    private boolean areSocialPointsWell(){
+        byte totalPoints = Byte.parseByte(socialPoints.getItemAt(socialPoints.getSelectedIndex()));
+        byte charisma = (Byte)charismaPoints.getValue();
+        byte manipulation = (Byte)manipulationPoints.getValue();
+        byte appearence = (Byte)appearencePoints.getValue();
+        
+        if(charisma + manipulation + appearence != totalPoints){
+            return false;
+        }  
+        
+        return true;
+    }
+    
+    private boolean areMentalPointsWell(){
+        byte totalPoints = Byte.parseByte(mentalPoints.getItemAt(mentalPoints.getSelectedIndex()));
+        byte perception = (Byte)perceptionPoints.getValue();
+        byte intelligence = (Byte)intelligencePoints.getValue();
+        byte wits = (Byte)witsPoints.getValue();
+        
+        if(perception + intelligence + wits != totalPoints){
+            return false;
+        }  
+        return true;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -304,7 +351,7 @@ public class CreateCharacter2 extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnNext)
-                .addGap(47, 47, 47))
+                .addGap(48, 48, 48))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,9 +359,9 @@ public class CreateCharacter2 extends javax.swing.JDialog {
                 .addComponent(lblTitleAddCharacter2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNext)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -325,7 +372,7 @@ public class CreateCharacter2 extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -337,12 +384,29 @@ public class CreateCharacter2 extends javax.swing.JDialog {
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         CreateCharacter3 createCharacter3 = new CreateCharacter3(mainScreen, true);
-        createCharacter3.getData2(getDataPart2());
-        createCharacter3.setVisible(true);
-        dispose();
-
         
-
+        if(!arePointsWellAsigned()){
+            JOptionPane.showMessageDialog(this, "The total points in the attributes sections must be different.", 
+                    "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+        else if(!arePhysicalPointsWell()){
+            JOptionPane.showMessageDialog(this, "Physical attributes points doesn't match with the total physical points", 
+                    "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+        else if(!areSocialPointsWell()){
+            JOptionPane.showMessageDialog(this, "Social attributes points doesn't match with the total social points", 
+                    "ERROR", JOptionPane.ERROR_MESSAGE);
+            
+        }
+        else if(!areMentalPointsWell()){
+            JOptionPane.showMessageDialog(this, "Mental attributes points doesn't match with the total mental points", 
+                    "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            createCharacter3.getData2(getDataPart2());
+            createCharacter3.setVisible(true);
+            dispose();
+        }
     }//GEN-LAST:event_btnNextActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

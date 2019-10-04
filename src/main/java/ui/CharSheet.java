@@ -57,6 +57,10 @@ public class CharSheet extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        lblHistory = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        valueHistory = new javax.swing.JTextArea();
         jLabel10 = new javax.swing.JLabel();
         panelBasicInformation = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -106,22 +110,44 @@ public class CharSheet extends javax.swing.JDialog {
         valuePerception = new javax.swing.JLabel();
         valueIntelligence = new javax.swing.JLabel();
         valueWits = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        valueHistory = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel10.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblHistory.setFont(new java.awt.Font("Z003", 3, 24)); // NOI18N
+        lblHistory.setForeground(new java.awt.Color(180, 0, 0));
+        lblHistory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHistory.setText("Character history");
+
+        valueHistory.setBackground(new java.awt.Color(204, 204, 204));
+        valueHistory.setColumns(20);
+        valueHistory.setLineWrap(true);
+        valueHistory.setRows(5);
+        valueHistory.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jScrollPane1.setViewportView(valueHistory);
+
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Z003", 3, 36)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(180, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Vampyre The Masquerade");
 
         panelBasicInformation.setLayout(new java.awt.GridLayout(1, 3));
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblCharacterName.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblCharacterName.setForeground(new java.awt.Color(0, 0, 0));
         lblCharacterName.setText("Character:");
 
+        lblPlayer.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblPlayer.setForeground(new java.awt.Color(0, 0, 0));
         lblPlayer.setText("Player:");
 
+        lblChronic.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblChronic.setForeground(new java.awt.Color(0, 0, 0));
         lblChronic.setText("Chronicle:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -137,7 +163,7 @@ public class CharSheet extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(valueCharacterName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(valueChronicle, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                    .addComponent(valueChronicle, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
                     .addComponent(valuePlayer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -156,15 +182,23 @@ public class CharSheet extends javax.swing.JDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblChronic)
                     .addComponent(valueChronicle, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelBasicInformation.add(jPanel2);
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblNature.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblNature.setForeground(new java.awt.Color(0, 0, 0));
         lblNature.setText("Nature:");
 
+        lblDemeanor.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblDemeanor.setForeground(new java.awt.Color(0, 0, 0));
         lblDemeanor.setText("Demeanor:");
 
+        lblConcept.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblConcept.setForeground(new java.awt.Color(0, 0, 0));
         lblConcept.setText("Concept");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -177,7 +211,7 @@ public class CharSheet extends javax.swing.JDialog {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(lblConcept, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(25, 25, 25)
-                        .addComponent(valueConcept, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
+                        .addComponent(valueConcept, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(lblNature, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
@@ -203,15 +237,23 @@ public class CharSheet extends javax.swing.JDialog {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblConcept, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(valueConcept, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelBasicInformation.add(jPanel3);
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblGeneration.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblGeneration.setForeground(new java.awt.Color(0, 0, 0));
         lblGeneration.setText("Generation:");
 
+        lblSire.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblSire.setForeground(new java.awt.Color(0, 0, 0));
         lblSire.setText("Sire:");
 
+        lblClan.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblClan.setForeground(new java.awt.Color(0, 0, 0));
         lblClan.setText("Clan:");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -226,7 +268,7 @@ public class CharSheet extends javax.swing.JDialog {
                     .addComponent(lblClan, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(valueClan, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                    .addComponent(valueClan, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                     .addComponent(valueGeneration, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(valueSire, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -246,26 +288,36 @@ public class CharSheet extends javax.swing.JDialog {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSire)
                     .addComponent(valueSire, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelBasicInformation.add(jPanel4);
 
-        lblAttributes.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lblAttributes.setFont(new java.awt.Font("Z003", 3, 24)); // NOI18N
+        lblAttributes.setForeground(new java.awt.Color(180, 0, 0));
         lblAttributes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAttributes.setText("Attributes");
 
         panelAttributes1.setLayout(new java.awt.GridLayout(1, 3));
 
-        lblPhysical1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblPhysical1.setFont(new java.awt.Font("Z003", 1, 24)); // NOI18N
+        lblPhysical1.setForeground(new java.awt.Color(180, 0, 0));
         lblPhysical1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPhysical1.setText("Physical");
 
-        lblStrength1.setText("Strength ____________");
+        lblStrength1.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblStrength1.setForeground(new java.awt.Color(0, 0, 0));
+        lblStrength1.setText("Strength _________");
 
-        lblDexterity1.setText("Dexterity ____________");
+        lblDexterity1.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblDexterity1.setForeground(new java.awt.Color(0, 0, 0));
+        lblDexterity1.setText("Dexterity ________");
 
-        lblStamina1.setText("Stamina _____________");
+        lblStamina1.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblStamina1.setForeground(new java.awt.Color(0, 0, 0));
+        lblStamina1.setText("Stamina _________");
 
         valueDexterity.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
@@ -277,9 +329,8 @@ public class CharSheet extends javax.swing.JDialog {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblPhysical1, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(103, 103, 103)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(lblStrength1)
@@ -294,12 +345,16 @@ public class CharSheet extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(valueStamina)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblPhysical1, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(lblPhysical1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStrength1)
                     .addComponent(valueStrength))
@@ -311,20 +366,29 @@ public class CharSheet extends javax.swing.JDialog {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStamina1)
                     .addComponent(valueStamina))
-                .addGap(0, 34, Short.MAX_VALUE))
+                .addGap(0, 19, Short.MAX_VALUE))
         );
 
         panelAttributes1.add(jPanel6);
 
-        lblSocial.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblSocial.setFont(new java.awt.Font("Z003", 1, 24)); // NOI18N
+        lblSocial.setForeground(new java.awt.Color(180, 0, 0));
         lblSocial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSocial.setText("Social");
 
-        lblCharisma.setText("Charisma _______________");
+        lblCharisma.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblCharisma.setForeground(new java.awt.Color(0, 0, 0));
+        lblCharisma.setText("Charisma ________");
 
-        lblManipulation.setText("Manipulation ___________");
+        lblManipulation.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblManipulation.setForeground(new java.awt.Color(0, 0, 0));
+        lblManipulation.setText("Manipulation ____");
 
-        lblAppearence.setText("Appearence ____________");
+        lblAppearence.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblAppearence.setForeground(new java.awt.Color(0, 0, 0));
+        lblAppearence.setText("Appearence ______");
 
         valueCharisma.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
@@ -336,9 +400,9 @@ public class CharSheet extends javax.swing.JDialog {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSocial, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+            .addComponent(lblSocial, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(101, 101, 101)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(lblCharisma)
@@ -370,20 +434,29 @@ public class CharSheet extends javax.swing.JDialog {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAppearence)
                     .addComponent(valueAppearence))
-                .addGap(0, 34, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         panelAttributes1.add(jPanel7);
 
-        lblMental.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblMental.setFont(new java.awt.Font("Z003", 1, 24)); // NOI18N
+        lblMental.setForeground(new java.awt.Color(180, 0, 0));
         lblMental.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblMental.setText("Mental");
 
-        lblPerception.setText("Perception _____________");
+        lblPerception.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblPerception.setForeground(new java.awt.Color(0, 0, 0));
+        lblPerception.setText("Perception _______");
 
-        lblIntelligence.setText("Intelligence ____________");
+        lblIntelligence.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblIntelligence.setForeground(new java.awt.Color(0, 0, 0));
+        lblIntelligence.setText("Intelligence ______");
 
-        lblWits.setText("Wits ___________________");
+        lblWits.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        lblWits.setForeground(new java.awt.Color(0, 0, 0));
+        lblWits.setText("Wits ___________");
 
         valuePerception.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
@@ -395,9 +468,9 @@ public class CharSheet extends javax.swing.JDialog {
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMental, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+            .addComponent(lblMental, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(103, 103, 103)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(lblPerception)
@@ -429,65 +502,73 @@ public class CharSheet extends javax.swing.JDialog {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblWits)
                     .addComponent(valueWits))
-                .addGap(0, 36, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         panelAttributes1.add(jPanel8);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Character history");
-
-        valueHistory.setColumns(20);
-        valueHistory.setLineWrap(true);
-        valueHistory.setRows(5);
-        jScrollPane1.setViewportView(valueHistory);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHistory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblAttributes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(167, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(140, 140, 140))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 156, Short.MAX_VALUE)
+                    .addComponent(panelBasicInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 930, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(panelAttributes1, javax.swing.GroupLayout.DEFAULT_SIZE, 1086, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(147, 147, 147)
+                .addComponent(lblAttributes, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
+                .addComponent(lblHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(104, 104, 104)
+                    .addComponent(panelBasicInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(479, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(293, 293, 293)
+                    .addComponent(panelAttributes1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(232, Short.MAX_VALUE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblAttributes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 65, Short.MAX_VALUE))
-            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panelBasicInformation, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panelAttributes1, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104)
-                .addComponent(lblAttributes, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(176, 176, 176)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(83, 83, 83)
-                    .addComponent(panelBasicInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(518, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(272, 272, 272)
-                    .addComponent(panelAttributes1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(263, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -505,6 +586,7 @@ public class CharSheet extends javax.swing.JDialog {
     private javax.swing.JLabel lblDemeanor;
     private javax.swing.JLabel lblDexterity1;
     private javax.swing.JLabel lblGeneration;
+    private javax.swing.JLabel lblHistory;
     private javax.swing.JLabel lblIntelligence;
     private javax.swing.JLabel lblManipulation;
     private javax.swing.JLabel lblMental;
