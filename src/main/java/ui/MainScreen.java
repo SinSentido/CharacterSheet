@@ -56,8 +56,9 @@ public class MainScreen extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnNewCharacter = new javax.swing.JButton();
+        btnLoadCharacter = new javax.swing.JButton();
+        btnInstructions = new javax.swing.JButton();
         backgroundImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -76,25 +77,35 @@ public class MainScreen extends javax.swing.JFrame {
         jLabel2.setText("Character genetor ");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 920, 60));
 
-        jButton1.setBackground(new java.awt.Color(180, 0, 0));
-        jButton1.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
-        jButton1.setText("New Character ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnNewCharacter.setBackground(new java.awt.Color(180, 0, 0));
+        btnNewCharacter.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        btnNewCharacter.setText("New Character ");
+        btnNewCharacter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnNewCharacterActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 190, 50));
+        jPanel1.add(btnNewCharacter, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 190, 50));
 
-        jButton2.setBackground(new java.awt.Color(180, 0, 0));
-        jButton2.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
-        jButton2.setText("Load Character ");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnLoadCharacter.setBackground(new java.awt.Color(180, 0, 0));
+        btnLoadCharacter.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        btnLoadCharacter.setText("Load Character ");
+        btnLoadCharacter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnLoadCharacterActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 190, 50));
+        jPanel1.add(btnLoadCharacter, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 190, 50));
+
+        btnInstructions.setBackground(new java.awt.Color(180, 0, 0));
+        btnInstructions.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
+        btnInstructions.setText("Instructions");
+        btnInstructions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInstructionsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnInstructions, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 190, 50));
 
         backgroundImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         backgroundImage.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -116,15 +127,20 @@ public class MainScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnNewCharacterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewCharacterActionPerformed
         CreateCharacter1 createCharacter1 = new CreateCharacter1(this, true);
         createCharacter1.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnNewCharacterActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnInstructionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInstructionsActionPerformed
+        Instructions instructions = new Instructions(this, true);
+        instructions.setVisible(true);
+    }//GEN-LAST:event_btnInstructionsActionPerformed
+
+    private void btnLoadCharacterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadCharacterActionPerformed
         SavedSheets savedSheets = new SavedSheets(this, true);
         savedSheets.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnLoadCharacterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,8 +179,9 @@ public class MainScreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgroundImage;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnInstructions;
+    private javax.swing.JButton btnLoadCharacter;
+    private javax.swing.JButton btnNewCharacter;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

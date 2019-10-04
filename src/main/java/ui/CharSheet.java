@@ -45,7 +45,7 @@ public class CharSheet extends javax.swing.JDialog {
         valueWits.setText(Byte.toString(charac.getWits()));
         
         //Character history
-        valueHistory.setText(charac.getHistory());
+        valueHistory.setText(charac.getHistory().replaceAll("&lj", "\n"));
     }
 
     /**

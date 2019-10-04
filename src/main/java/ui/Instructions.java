@@ -10,13 +10,15 @@ package ui;
  * @author sinsentido
  */
 public class Instructions extends javax.swing.JDialog {
-
+    MainScreen mainScreen;
+    
     /**
      * Creates new form Instructions
      */
     public Instructions(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        mainScreen = (MainScreen)parent;
     }
 
     /**
@@ -48,54 +50,58 @@ public class Instructions extends javax.swing.JDialog {
         jLabel17 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        btnNext = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setFont(new java.awt.Font("Z003", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(180, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Basic description");
 
         jLabel2.setText("Character name:");
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("<html>\nName of the character that the player is interpreting<br> \ninside the game\n</html>");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel4.setText("jLabel3");
+        jLabel4.setText("<html>\nName of the player that is using this character\n</html>");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel5.setText("Character name:");
+        jLabel5.setText("Player name:");
 
-        jLabel6.setText("jLabel3");
+        jLabel6.setText("<html>\nThe title of the series of stories and the world in which the character exists.\n</html>");
         jLabel6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel7.setText("Character name:");
+        jLabel7.setText(" Chronicle:");
 
-        jLabel8.setText("jLabel3");
+        jLabel8.setText("<html>\nDescription of the personality of a character. Nature is his true personaity.\n</html>");
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel9.setText("Character name:");
+        jLabel9.setText("Nature:");
 
-        jLabel10.setText("jLabel3");
+        jLabel10.setText("<html>\nDemeanor is the facade a character presents to the world.\n</html>");
         jLabel10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel11.setText("Character name:");
+        jLabel11.setText("Demeanor:");
 
-        jLabel12.setText("jLabel3");
+        jLabel12.setText("<html>\nThe overall image of the character who he was in his mortal existence.\n</html>");
         jLabel12.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel13.setText("Character name:");
+        jLabel13.setText("Concept:");
 
-        jLabel14.setText("jLabel3");
+        jLabel14.setText("<html>\nThe particular bloodline of vampires to which the character belongs.\n</html>");
         jLabel14.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel15.setText("Character name:");
+        jLabel15.setText("Clan:");
 
-        jLabel16.setText("jLabel3");
+        jLabel16.setText("<html>\nIt is the distance between the character and Caine (the first vampire) in terms of sires.\n</html>");
         jLabel16.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel17.setText("Character name:");
+        jLabel17.setText("Generation:");
 
-        jLabel19.setText("Character name:");
+        jLabel19.setText("Sire:");
 
-        jLabel18.setText("jLabel3");
+        jLabel18.setText("<html>\nThe Sire is the vampyre that embrace the character and turned him into an immortal.\n</html>");
         jLabel18.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -141,7 +147,7 @@ public class Instructions extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -151,7 +157,7 @@ public class Instructions extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
@@ -187,67 +193,45 @@ public class Instructions extends javax.swing.JDialog {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
+        btnNext.setText("Next");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 9, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnNext)
+                .addGap(76, 76, 76))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnNext)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Instructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Instructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Instructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Instructions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                Instructions dialog = new Instructions(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        InstructionsAttributes instructionsAttributes = new InstructionsAttributes(mainScreen, true);
+        instructionsAttributes.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnNextActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnNext;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

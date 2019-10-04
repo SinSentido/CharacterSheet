@@ -1,8 +1,10 @@
 /home/sinsentido/NetBeansProjects/CharacterSheet/src/main/java/ui/CreateCharacter3.java
 /home/sinsentido/NetBeansProjects/CharacterSheet/src/main/java/logic/Logic.java
+/home/sinsentido/NetBeansProjects/CharacterSheet/src/main/java/ui/Instructions.java
 /home/sinsentido/NetBeansProjects/CharacterSheet/src/main/java/ui/CharSheet.java
 /home/sinsentido/NetBeansProjects/CharacterSheet/src/main/java/ui/CreateCharacter2.java
 /home/sinsentido/NetBeansProjects/CharacterSheet/src/main/java/ui/CreateCharacter1.java
+/home/sinsentido/NetBeansProjects/CharacterSheet/src/main/java/ui/InstructionsAttributes.java
 /home/sinsentido/NetBeansProjects/CharacterSheet/src/main/java/ui/MainScreen.java
 /home/sinsentido/NetBeansProjects/CharacterSheet/src/main/java/ui/SavedSheets.java
 /home/sinsentido/NetBeansProjects/CharacterSheet/src/main/java/dto/Charac.java

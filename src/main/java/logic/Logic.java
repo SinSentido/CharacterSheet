@@ -95,7 +95,7 @@ public class Logic {
                 charac.getStrength().toString(), charac.getDexterity().toString(), charac.getStamina().toString(),
                 charac.getCharisma().toString(), charac.getManipulation().toString(), charac.getAppearence().toString(),
                 charac.getPerception().toString(), charac.getIntelligence().toString(), charac.getWits().toString(),
-                charac.getHistory());
+                charac.getHistory().replaceAll("\n", "&lj"));
         
         try {
             newFile = new File("./save/" + charac.getCharName().replaceAll(" ", "") + 
