@@ -33,15 +33,12 @@ public class MainScreen extends javax.swing.JFrame {
     private void loadBackgroundImage(){
         File backgroundImageFile = new File("./vampWallpaper.jpg");
         
-        if(backgroundImageFile.exists()){
-            System.out.println("la imagen esta en su sitio");
+        if(!backgroundImageFile.exists()){
+            System.out.println("Image doesn't exist");
         }
-        
-        backgroundImage = new javax.swing.JLabel();
-        backgroundImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        backgroundImage.setIcon(new javax.swing.ImageIcon(backgroundImageFile.getAbsolutePath())); // NOI18N
-        backgroundImage.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel1.add(backgroundImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 490));
+        else{
+            backgroundImage.setIcon(new javax.swing.ImageIcon(backgroundImageFile.getAbsolutePath())); // NOI18N
+        }
     }
     
     /**
