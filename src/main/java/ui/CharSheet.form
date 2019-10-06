@@ -110,7 +110,7 @@
               <Color blue="0" green="0" red="b4" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Character history"/>
+            <Property name="text" type="java.lang.String" value="Character history "/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -147,7 +147,7 @@
               <Color blue="0" green="0" red="b4" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Vampyre The Masquerade"/>
+            <Property name="text" type="java.lang.String" value="Vampyre The Masquerade "/>
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="panelBasicInformation">
@@ -450,7 +450,7 @@
               <Color blue="0" green="0" red="b4" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Attributes"/>
+            <Property name="text" type="java.lang.String" value="Attributes "/>
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="panelAttributes1">
@@ -532,7 +532,7 @@
                       <Color blue="0" green="0" red="b4" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Physical"/>
+                    <Property name="text" type="java.lang.String" value="Physical "/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblStrength1">
@@ -659,7 +659,7 @@
                       <Color blue="0" green="0" red="b4" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Social"/>
+                    <Property name="text" type="java.lang.String" value="Social "/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblCharisma">
@@ -786,7 +786,7 @@
                       <Color blue="0" green="0" red="b4" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Mental"/>
+                    <Property name="text" type="java.lang.String" value="Mental "/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblPerception">

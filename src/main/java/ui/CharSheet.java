@@ -119,7 +119,7 @@ public class CharSheet extends javax.swing.JDialog {
         lblHistory.setFont(new java.awt.Font("Z003", 3, 24)); // NOI18N
         lblHistory.setForeground(new java.awt.Color(180, 0, 0));
         lblHistory.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHistory.setText("Character history");
+        lblHistory.setText("Character history ");
 
         valueHistory.setBackground(new java.awt.Color(204, 204, 204));
         valueHistory.setColumns(20);
@@ -132,7 +132,7 @@ public class CharSheet extends javax.swing.JDialog {
         jLabel10.setFont(new java.awt.Font("Z003", 3, 36)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(180, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Vampyre The Masquerade");
+        jLabel10.setText("Vampyre The Masquerade ");
 
         panelBasicInformation.setLayout(new java.awt.GridLayout(1, 3));
 
@@ -296,7 +296,7 @@ public class CharSheet extends javax.swing.JDialog {
         lblAttributes.setFont(new java.awt.Font("Z003", 3, 24)); // NOI18N
         lblAttributes.setForeground(new java.awt.Color(180, 0, 0));
         lblAttributes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAttributes.setText("Attributes");
+        lblAttributes.setText("Attributes ");
 
         panelAttributes1.setLayout(new java.awt.GridLayout(1, 3));
 
@@ -305,7 +305,7 @@ public class CharSheet extends javax.swing.JDialog {
         lblPhysical1.setFont(new java.awt.Font("Z003", 1, 24)); // NOI18N
         lblPhysical1.setForeground(new java.awt.Color(180, 0, 0));
         lblPhysical1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblPhysical1.setText("Physical");
+        lblPhysical1.setText("Physical ");
 
         lblStrength1.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
         lblStrength1.setForeground(new java.awt.Color(0, 0, 0));
@@ -376,7 +376,7 @@ public class CharSheet extends javax.swing.JDialog {
         lblSocial.setFont(new java.awt.Font("Z003", 1, 24)); // NOI18N
         lblSocial.setForeground(new java.awt.Color(180, 0, 0));
         lblSocial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSocial.setText("Social");
+        lblSocial.setText("Social ");
 
         lblCharisma.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
         lblCharisma.setForeground(new java.awt.Color(0, 0, 0));
@@ -444,7 +444,7 @@ public class CharSheet extends javax.swing.JDialog {
         lblMental.setFont(new java.awt.Font("Z003", 1, 24)); // NOI18N
         lblMental.setForeground(new java.awt.Color(180, 0, 0));
         lblMental.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMental.setText("Mental");
+        lblMental.setText("Mental ");
 
         lblPerception.setFont(new java.awt.Font("Z003", 1, 18)); // NOI18N
         lblPerception.setForeground(new java.awt.Color(0, 0, 0));
